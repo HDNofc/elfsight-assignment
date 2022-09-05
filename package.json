@@ -22,6 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint:js": "eslint --ignore-path .gitignore --ext .ts,.tsx,.js ./src/",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:scss": "stylelint ./src/**/*.scss --config .stylelintrc.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,6 +46,15 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.54.8"
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "sass": "^1.54.8",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0"
   }
 }
