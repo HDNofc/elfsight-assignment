@@ -26,6 +26,7 @@
   }
 }
 
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 :global {
   .react-select {
     .react-select__dropdown-indicator {
