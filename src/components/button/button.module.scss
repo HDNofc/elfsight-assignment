@@ -1,0 +1,91 @@
+@use '../../lib/styles' as *;
+
+.button {
+  $this: &;
+
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+
+  &_type {
+    &_primary {
+      color: $white;
+      background-color: $dodger-blue;
+      border-color: $dodger-blue;
+      border-radius: 2px;
+      box-shadow: 0 2px rgb(0 0 0 / 4.3%);
+      transition: background-color 0.2s, color 0.2s;
+
+      &:focus,
+      &:hover {
+        color: $white;
+        background-color: $blue-jeans;
+        border-color: $blue-jeans;
+      }
+    }
+  }
+
+  &_size {
+    &_small {
+      padding: 1px 7px;
+      font-size: 14px;
+      border-radius: 2px;
+    }
+
+    &_medium {
+      padding: 5px 15px;
+      font-size: 14px;
+    }
+
+    &_large {
+      padding: 8px 15px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &_shape {
+    &_circle {
+      min-width: 32px;
+      padding-right: 0;
+      padding-left: 0;
+      text-align: center;
+      border-radius: 50%;
+    }
+
+    &_round {
+      border-radius: 40px;
+    }
+  }
+
+  &_only-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    #{$this}__text {
+      margin: 0;
+      @include visually-hidden;
+    }
+  }
+
+  &_disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &_wide {
+    width: 100%;
+  }
+}
