@@ -1,0 +1,88 @@
+@use '../../lib/styles' as *;
+
+/* stylelint-disable selector-class-pattern */
+.select-field {
+  padding-top: 12px;
+
+  &__container {
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 26px;
+    z-index: 1;
+    padding: 5px 8px;
+    color: $white;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $xiketic;
+    border-radius: 10px;
+    transform: translateY(-50%);
+    transition: top 150ms, left 150ms, font-size 150ms, color 150ms, line-height 150ms, padding 150ms,
+      background-color 300ms;
+    pointer-events: none;
+  }
+}
+
+:global {
+  .react-select {
+    .react-select__dropdown-indicator {
+      transition: transform 250ms;
+    }
+
+    .react-select__control {
+      height: 44px;
+      font-size: 16px;
+      line-height: 16px;
+      background-color: $space-cabet;
+      border: none;
+      border-radius: 10px;
+
+      &--is-focused {
+        border-color: #1890ff;
+      }
+
+      &--menu-is-open {
+        .react-select__dropdown-indicator {
+          transform: rotate(180deg);
+          transition: transform 250ms;
+        }
+      }
+    }
+
+    .react-select__single-value {
+      color: $white;
+    }
+
+    .react-select__value-container {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .react-select__menu {
+      z-index: 2;
+      background-color: $space-cabet;
+      border-radius: 10px;
+    }
+
+    .react-select__placeholder {
+      color: #65657b;
+    }
+
+    .react-select__option {
+      padding-left: 20px;
+      color: $white;
+
+      &--is-selected {
+        color: $white;
+        background-color: transparent;
+      }
+
+      &--is-focused {
+        background-color: #1890ff;
+      }
+    }
+  }
+}

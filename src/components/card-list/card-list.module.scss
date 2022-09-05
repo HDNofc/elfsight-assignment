@@ -1,0 +1,26 @@
+@use '../../lib/styles' as *;
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 24px 0;
+  align-items: start;
+  justify-items: center;
+  margin: 0;
+  padding: 20px 0;
+
+  @media (min-width: $tablet-portrait) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 24px 16px;
+    padding: 28px 0;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 24px 20px;
+  }
+
+  &__card {
+    display: block;
+  }
+}

@@ -1,0 +1,49 @@
+@use '../../lib/styles' as *;
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: $xiketic;
+
+  .widget__title {
+    margin-bottom: 4px;
+    text-align: center;
+
+    @media only screen and (min-width: $tablet-portrait) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__more-button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__more-button {
+    width: 200px;
+  }
+
+  &__error {
+    margin: 40px 10px;
+    color: $white;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  &__list-loading-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list-loading {
+    width: 80px;
+    height: 80px;
+  }
+}

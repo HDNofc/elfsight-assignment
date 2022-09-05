@@ -1,0 +1,81 @@
+@use '../../lib/styles' as *;
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+
+  &__image {
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+
+    &_with-placeholder {
+      display: none;
+    }
+  }
+
+  &__name {
+    margin: 8px 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+
+    @media (min-width: $tablet-portrait) {
+      margin: 12px 0 24px;
+      font-weight: 800;
+      font-size: 20px;
+    }
+  }
+
+  &__section {
+    display: flex;
+
+    @media (min-width: $tablet-portrait) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+
+      @media (min-width: $tablet-portrait) {
+        margin-bottom: 12px;
+      }
+    }
+
+    > span {
+      width: 50%;
+      text-transform: capitalize;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__placeholder {
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    animation-name: fade-in;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+  }
+
+
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

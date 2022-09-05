@@ -1,0 +1,25 @@
+@use '../../lib/styles' as *;
+
+.filters {
+  &__text-fields-group {
+    > div {
+      margin-bottom: 4px;
+    }
+
+    @media (min-width: $tablet-portrait) {
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+  &__select-fields-group {
+    > div {
+      margin-bottom: 4px;
+    }
+  }
+
+  @media (min-width: $tablet-portrait) {
+    display: flex;
+    flex-direction: column;
+  }
+}
