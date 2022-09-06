@@ -1,6 +1,6 @@
 # Rick and Morty Widget
 
-[![Build](https://github.com/HDNofc/elfsight-assignment/actions/workflows/main.yaml/badge.svg)](https://github.com/HDNofc/elfsight-assignment/actions/workflows/main.yaml)
+[![Build](https://github.com/HDNofc/elfsight-assignment/actions/workflows/main.yml/badge.svg)](https://github.com/HDNofc/elfsight-assignment/actions/workflows/main.yml)
 
 ## Demo
 https://warm-cendol-e187b3.netlify.app/
